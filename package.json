@@ -1,0 +1,49 @@
+{
+	"name": "blant",
+	"version": "0.0.1",
+	"description": "blant web app framework.",
+	"main": "lib/app.js",
+	"scripts": {
+		"test": "jest",
+		"tsc": " rm -rf lant/ && tsc",
+		"doc": "typedoc --out docs --mode modules ./lib",
+		"test-cov": "jest --coverage --runInBand --forceExit"
+	},
+	"repository": "ajxlant/blant",
+	"keywords": [
+		"web",
+		"app",
+		"http"
+	],
+	"author": "blant",
+	"license": "MIT",
+	"dependencies": {
+		"tslib": "^1.9.3"
+	},
+	"devDependencies": {
+		"@types/jest": "^24.0.13",
+		"@types/node": "^12.0.2",
+		"babel-core": "^6.26.3",
+		"babel-jest": "^24.8.0",
+		"babel-preset-env": "^1.7.0",
+		"jest": "^24.8.0",
+		"regenerator-runtime": "^0.13.2",
+		"ts-jest": "^24.0.2",
+		"ts-node": "^8.1.0",
+		"tslint": "^5.16.0",
+		"tslint-config-standard": "^8.0.1",
+		"typedoc": "^0.14.2",
+		"typescript": "^3.4.5"
+	},
+	"jest": {
+		"testMatch": [
+			"**/test/!(helpers)/*.js"
+		],
+		"coverageReporters": [
+			"text-summary",
+			"lcov"
+		],
+		"bail": true,
+		"testEnvironment": "node"
+	}
+}
